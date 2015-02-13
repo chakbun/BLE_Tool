@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF68A5EA1A493365006BB878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A5E91A493365006BB878 /* main.m */; };
+		DF68A5ED1A493365006BB878 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A5EC1A493365006BB878 /* AppDelegate.m */; };
+		DF68A5F01A493365006BB878 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A5EF1A493365006BB878 /* ViewController.m */; };
+		DF68A5F31A493365006BB878 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF68A5F11A493365006BB878 /* Main.storyboard */; };
+		DF68A5F51A493365006BB878 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF68A5F41A493365006BB878 /* Images.xcassets */; };
+		DF68A5F81A493365006BB878 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF68A5F61A493365006BB878 /* LaunchScreen.xib */; };
+		DF68A6041A493365006BB878 /* BLEToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A6031A493365006BB878 /* BLEToolTests.m */; };
+		DF68A60F1A493B00006BB878 /* JRBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */; };
+		DF68A6111A493C54006BB878 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF68A6101A493C54006BB878 /* CoreBluetooth.framework */; };
+		DF68A6161A49539B006BB878 /* JRCBPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A6151A49539B006BB878 /* JRCBPeripheral.m */; };
+		DFA5BD901A8C82050000FD35 /* MPController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA5BD8F1A8C82050000FD35 /* MPController.m */; };
+		DFCBA52B1A5A24A2007E433F /* VMBleConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */; };
+		EE3773511A5FE235009E66CB /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE37734E1A5FE235009E66CB /* SVProgressHUD.bundle */; };
+		EE3773521A5FE235009E66CB /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3773501A5FE235009E66CB /* SVProgressHUD.m */; };
+		EE492A3B1A637CB6000B6CDA /* VMAlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE492A3A1A637CB6000B6CDA /* VMAlertUtil.m */; };
+		EE4A88E01A5CC4A2001440D6 /* VMTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A88DF1A5CC4A2001440D6 /* VMTimerViewController.m */; };
+		EE4A88E31A5CC4C1001440D6 /* VMScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A88E21A5CC4C1001440D6 /* VMScaleViewController.m */; };
+		EE4A88E61A5CC4D8001440D6 /* VMThermometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4A88E51A5CC4D8001440D6 /* VMThermometerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF68A5FE1A493365006BB878 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF68A5DC1A493365006BB878 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF68A5E31A493365006BB878;
+			remoteInfo = BLETool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF68A5E41A493365006BB878 /* BLETool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLETool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF68A5E81A493365006BB878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF68A5E91A493365006BB878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF68A5EB1A493365006BB878 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DF68A5EC1A493365006BB878 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DF68A5EE1A493365006BB878 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DF68A5EF1A493365006BB878 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DF68A5F21A493365006BB878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF68A5F41A493365006BB878 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DF68A5F71A493365006BB878 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DF68A5FD1A493365006BB878 /* BLEToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLEToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF68A6021A493365006BB878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF68A6031A493365006BB878 /* BLEToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEToolTests.m; sourceTree = "<group>"; };
+		DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRBluetoothManager.h; sourceTree = "<group>"; };
+		DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRBluetoothManager.m; sourceTree = "<group>"; };
+		DF68A6101A493C54006BB878 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DF68A6141A49539B006BB878 /* JRCBPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRCBPeripheral.h; sourceTree = "<group>"; };
+		DF68A6151A49539B006BB878 /* JRCBPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRCBPeripheral.m; sourceTree = "<group>"; };
+		DFA5BD8E1A8C82050000FD35 /* MPController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPController.h; sourceTree = "<group>"; };
+		DFA5BD8F1A8C82050000FD35 /* MPController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPController.m; sourceTree = "<group>"; };
+		DFCBA5291A5A24A2007E433F /* VMBleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBleConnector.h; sourceTree = "<group>"; };
+		DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBleConnector.m; sourceTree = "<group>"; };
+		EE37734D1A5FE235009E66CB /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		EE37734E1A5FE235009E66CB /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		EE37734F1A5FE235009E66CB /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		EE3773501A5FE235009E66CB /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		EE492A391A637CB6000B6CDA /* VMAlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMAlertUtil.h; sourceTree = "<group>"; };
+		EE492A3A1A637CB6000B6CDA /* VMAlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMAlertUtil.m; sourceTree = "<group>"; };
+		EE4A88DE1A5CC4A2001440D6 /* VMTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMTimerViewController.h; sourceTree = "<group>"; };
+		EE4A88DF1A5CC4A2001440D6 /* VMTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMTimerViewController.m; sourceTree = "<group>"; };
+		EE4A88E11A5CC4C1001440D6 /* VMScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMScaleViewController.h; sourceTree = "<group>"; };
+		EE4A88E21A5CC4C1001440D6 /* VMScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMScaleViewController.m; sourceTree = "<group>"; };
+		EE4A88E41A5CC4D8001440D6 /* VMThermometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMThermometerViewController.h; sourceTree = "<group>"; };
+		EE4A88E51A5CC4D8001440D6 /* VMThermometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMThermometerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF68A5E11A493365006BB878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF68A6111A493C54006BB878 /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF68A5FA1A493365006BB878 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF68A5DB1A493365006BB878 = {
+			isa = PBXGroup;
+			children = (
+				EE492A391A637CB6000B6CDA /* VMAlertUtil.h */,
+				EE492A3A1A637CB6000B6CDA /* VMAlertUtil.m */,
+				EE37734C1A5FE235009E66CB /* SVProgressHUD */,
+				DF68A6101A493C54006BB878 /* CoreBluetooth.framework */,
+				DF68A5E61A493365006BB878 /* BLETool */,
+				DF68A6001A493365006BB878 /* BLEToolTests */,
+				DF68A5E51A493365006BB878 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF68A5E51A493365006BB878 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF68A5E41A493365006BB878 /* BLETool.app */,
+				DF68A5FD1A493365006BB878 /* BLEToolTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF68A5E61A493365006BB878 /* BLETool */ = {
+			isa = PBXGroup;
+			children = (
+				DF68A5EB1A493365006BB878 /* AppDelegate.h */,
+				DF68A5EC1A493365006BB878 /* AppDelegate.m */,
+				DF68A5EE1A493365006BB878 /* ViewController.h */,
+				DF68A5EF1A493365006BB878 /* ViewController.m */,
+				EE4A88E11A5CC4C1001440D6 /* VMScaleViewController.h */,
+				EE4A88E21A5CC4C1001440D6 /* VMScaleViewController.m */,
+				EE4A88DE1A5CC4A2001440D6 /* VMTimerViewController.h */,
+				EE4A88DF1A5CC4A2001440D6 /* VMTimerViewController.m */,
+				EE4A88E41A5CC4D8001440D6 /* VMThermometerViewController.h */,
+				EE4A88E51A5CC4D8001440D6 /* VMThermometerViewController.m */,
+				DF68A5F11A493365006BB878 /* Main.storyboard */,
+				DF68A5F41A493365006BB878 /* Images.xcassets */,
+				DF68A5F61A493365006BB878 /* LaunchScreen.xib */,
+				DF68A5E71A493365006BB878 /* Supporting Files */,
+				DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */,
+				DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */,
+				DF68A6141A49539B006BB878 /* JRCBPeripheral.h */,
+				DF68A6151A49539B006BB878 /* JRCBPeripheral.m */,
+				DFCBA5291A5A24A2007E433F /* VMBleConnector.h */,
+				DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */,
+				DFA5BD8E1A8C82050000FD35 /* MPController.h */,
+				DFA5BD8F1A8C82050000FD35 /* MPController.m */,
+			);
+			path = BLETool;
+			sourceTree = "<group>";
+		};
+		DF68A5E71A493365006BB878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF68A5E81A493365006BB878 /* Info.plist */,
+				DF68A5E91A493365006BB878 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF68A6001A493365006BB878 /* BLEToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF68A6031A493365006BB878 /* BLEToolTests.m */,
+				DF68A6011A493365006BB878 /* Supporting Files */,
+			);
+			path = BLEToolTests;
+			sourceTree = "<group>";
+		};
+		DF68A6011A493365006BB878 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF68A6021A493365006BB878 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE37734C1A5FE235009E66CB /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EE37734D1A5FE235009E66CB /* SVProgressHUD-Prefix.pch */,
+				EE37734E1A5FE235009E66CB /* SVProgressHUD.bundle */,
+				EE37734F1A5FE235009E66CB /* SVProgressHUD.h */,
+				EE3773501A5FE235009E66CB /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF68A5E31A493365006BB878 /* BLETool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF68A6071A493365006BB878 /* Build configuration list for PBXNativeTarget "BLETool" */;
+			buildPhases = (
+				DF68A5E01A493365006BB878 /* Sources */,
+				DF68A5E11A493365006BB878 /* Frameworks */,
+				DF68A5E21A493365006BB878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLETool;
+			productName = BLETool;
+			productReference = DF68A5E41A493365006BB878 /* BLETool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF68A5FC1A493365006BB878 /* BLEToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF68A60A1A493365006BB878 /* Build configuration list for PBXNativeTarget "BLEToolTests" */;
+			buildPhases = (
+				DF68A5F91A493365006BB878 /* Sources */,
+				DF68A5FA1A493365006BB878 /* Frameworks */,
+				DF68A5FB1A493365006BB878 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF68A5FF1A493365006BB878 /* PBXTargetDependency */,
+			);
+			name = BLEToolTests;
+			productName = BLEToolTests;
+			productReference = DF68A5FD1A493365006BB878 /* BLEToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF68A5DC1A493365006BB878 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Jaben;
+				TargetAttributes = {
+					DF68A5E31A493365006BB878 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4F4JWNAD79;
+					};
+					DF68A5FC1A493365006BB878 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = DF68A5E31A493365006BB878;
+					};
+				};
+			};
+			buildConfigurationList = DF68A5DF1A493365006BB878 /* Build configuration list for PBXProject "BLETool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF68A5DB1A493365006BB878;
+			productRefGroup = DF68A5E51A493365006BB878 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF68A5E31A493365006BB878 /* BLETool */,
+				DF68A5FC1A493365006BB878 /* BLEToolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF68A5E21A493365006BB878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF68A5F31A493365006BB878 /* Main.storyboard in Resources */,
+				DF68A5F81A493365006BB878 /* LaunchScreen.xib in Resources */,
+				DF68A5F51A493365006BB878 /* Images.xcassets in Resources */,
+				EE3773511A5FE235009E66CB /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF68A5FB1A493365006BB878 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF68A5E01A493365006BB878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF68A6161A49539B006BB878 /* JRCBPeripheral.m in Sources */,
+				DF68A60F1A493B00006BB878 /* JRBluetoothManager.m in Sources */,
+				DF68A5F01A493365006BB878 /* ViewController.m in Sources */,
+				DF68A5ED1A493365006BB878 /* AppDelegate.m in Sources */,
+				EE492A3B1A637CB6000B6CDA /* VMAlertUtil.m in Sources */,
+				EE4A88E31A5CC4C1001440D6 /* VMScaleViewController.m in Sources */,
+				DFCBA52B1A5A24A2007E433F /* VMBleConnector.m in Sources */,
+				EE4A88E01A5CC4A2001440D6 /* VMTimerViewController.m in Sources */,
+				EE3773521A5FE235009E66CB /* SVProgressHUD.m in Sources */,
+				DF68A5EA1A493365006BB878 /* main.m in Sources */,
+				DFA5BD901A8C82050000FD35 /* MPController.m in Sources */,
+				EE4A88E61A5CC4D8001440D6 /* VMThermometerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF68A5F91A493365006BB878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF68A6041A493365006BB878 /* BLEToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF68A5FF1A493365006BB878 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF68A5E31A493365006BB878 /* BLETool */;
+			targetProxy = DF68A5FE1A493365006BB878 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF68A5F11A493365006BB878 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF68A5F21A493365006BB878 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF68A5F61A493365006BB878 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF68A5F71A493365006BB878 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF68A6051A493365006BB878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DF68A6061A493365006BB878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF68A6081A493365006BB878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = BLETool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF68A6091A493365006BB878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xtreme Programming Group, Inc.";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = BLETool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		DF68A60B1A493365006BB878 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BLEToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLETool.app/BLETool";
+			};
+			name = Debug;
+		};
+		DF68A60C1A493365006BB878 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BLEToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLETool.app/BLETool";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF68A5DF1A493365006BB878 /* Build configuration list for PBXProject "BLETool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF68A6051A493365006BB878 /* Debug */,
+				DF68A6061A493365006BB878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF68A6071A493365006BB878 /* Build configuration list for PBXNativeTarget "BLETool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF68A6081A493365006BB878 /* Debug */,
+				DF68A6091A493365006BB878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF68A60A1A493365006BB878 /* Build configuration list for PBXNativeTarget "BLEToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF68A60B1A493365006BB878 /* Debug */,
+				DF68A60C1A493365006BB878 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF68A5DC1A493365006BB878 /* Project object */;
+}
