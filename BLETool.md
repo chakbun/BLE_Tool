@@ -7,7 +7,8 @@ BLE(bluetooth low energy)，低功耗蓝牙，蓝牙4.0
 ## 框架
 CoreBluetooth
 
-官网：https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html
+官网：
+https://developer.apple.com/library/ios/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html
 
 ## 设备要求
 
