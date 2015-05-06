@@ -11,7 +11,6 @@
 #import "VMBleConnector.h"
 #import "SVProgressHUD.h"
 #import "VMAlertUtil.h"
-#import "MPController.h"
 
 @interface ViewController () <VMBleConnectorDeledate>
 {
@@ -66,10 +65,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"mpSegue"]) {
-        MPController *targetController = segue.destinationViewController;
-        if ([targetController respondsToSelector:@selector(setJrPeriphral:)]) {
-            targetController.jrPeriphral = sender;
-        }
+        
     }
 }
 
@@ -91,9 +87,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuserId];
     }
     
-    JRCBPeripheral *peripheral = blePeriphrals[indexPath.row];
-    cell.textLabel.text = peripheral.peripheral.name?:@"Periphral";
-    cell.detailTextLabel.text = [peripheral.peripheral.identifier UUIDString];
+    NSDictionary *peripheralInfo = blePeriphrals[indexPath.row];
+    CBPeripheral *peripheral = peripheralInfo[VM_Periperal];
+    cell.textLabel.text = peripheral.name?:@"Periphral";
+    cell.detailTextLabel.text = [peripheral.identifier UUIDString];
     
     return cell;
 }
@@ -104,27 +101,25 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    JRCBPeripheral *jrPeriphral = blePeriphrals[indexPath.row];
-//    [SVProgressHUD showWithStatus:@"正在连接..." maskType:SVProgressHUDMaskTypeClear];
-    NSLog(@"statue %ld",jrPeriphral.peripheral.state);
-    if (jrPeriphral.peripheral.state == CBPeripheralStateConnected) {
+    NSDictionary *peripheralInfo = blePeriphrals[indexPath.row];
+    CBPeripheral *peripheral = peripheralInfo[VM_Periperal];
+
+    NSLog(@"statue %ld",peripheral.state);
+    if (peripheral.state == CBPeripheralStateConnected) {
         
     }else {
-        [[JRBluetoothManager shareManager] connectPeripheral:jrPeriphral];
+        [[JRBluetoothManager shareManager] connectPeripheral:peripheral];
     }
     
-    if ([jrPeriphral.peripheral.name isEqualToString:kDeviceThermometerName]) {
+    if ([peripheral.name isEqualToString:kDeviceThermometerName]) {
         [self performSegueWithIdentifier:@"thermometerViewController" sender:nil];
         
-    }else if([jrPeriphral.peripheral.name isEqualToString:kDeviceTimerName]) {
+    }else if([peripheral.name isEqualToString:kDeviceTimerName]) {
         [self performSegueWithIdentifier:@"timerViewController" sender:nil];
         
-    }else if([jrPeriphral.peripheral.name isEqualToString:kDeviceScaleName]) {
+    }else if([peripheral.name isEqualToString:kDeviceScaleName]) {
         [self performSegueWithIdentifier:@"scaleViewController" sender:nil];
-    }else {
-        [self performSegueWithIdentifier:@"mpSegue" sender:jrPeriphral];
     }
-
 }
 
 #pragma mark - VMBle Connector Deledate
@@ -149,14 +144,19 @@
     [VMAlertUtil show:@"连接设备失败"];
 }
 
-- (void)didFoundPeripheral:(JRCBPeripheral *)peripheral
+- (void)didFoundPeripheralInformation:(NSDictionary *)peripheralInfo
 {
-    for(JRCBPeripheral *jrPeriphral in blePeriphrals) {
-        if([[jrPeriphral.peripheral.identifier UUIDString] isEqualToString:[peripheral.peripheral.identifier UUIDString]]) {
+ 
+    CBPeripheral *newPeripheral = peripheralInfo[VM_Periperal];
+
+    for(NSDictionary *tempInfo in blePeriphrals) {
+        CBPeripheral *existPeripheral = tempInfo[VM_Periperal];
+        
+        if([[existPeripheral.identifier UUIDString] isEqualToString:[newPeripheral.identifier UUIDString]]) {
             return;
         }
     }
-    [blePeriphrals addObject:peripheral];
+    [blePeriphrals addObject:peripheralInfo];
     [self.periphralTableView reloadData];
 }
 

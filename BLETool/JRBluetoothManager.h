@@ -8,14 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "JRCBPeripheral.h"
 
 @protocol JRBluetoothManagerDelegate <NSObject>
 
-@optional
+@required
 
 - (void)didUpdateState:(CBCentralManagerState)state;
-- (void)didFoundPeripheral:(JRCBPeripheral *)peripheral;
+
+@optional
+
+- (void)didFoundPeripheral:(CBPeripheral *)peripheral advertisement:(NSDictionary *)advertisement rssi:(NSNumber *)rssi;
+
 - (void)didConnectPeriphral:(CBPeripheral *)periphral;
 - (void)didFailToConnectPeriphral:(CBPeripheral *)periphral;
 - (void)didDisconnectPeriphral:(CBPeripheral *)periphral;
@@ -35,14 +38,15 @@
 - (void)startScanPeripherals:(NSArray *)serviceUUIDs;
 - (void)stopScanPeripherals;
 
-- (void)connectPeripheral:(JRCBPeripheral *)jrPeripheral;
-- (void)cancelConnectPeriphral:(JRCBPeripheral *)jrPeripheral;
+- (void)connectPeripheral:(CBPeripheral *)peripheral;
+- (void)cancelConnectPeriphral:(CBPeripheral *)peripheral;
 
-- (void)readDataFromPeriperal:(JRCBPeripheral *)jrPeripheral inCharacteristic:(CBCharacteristic *)characteristic;
 - (void)readDataFromPeriperalWithName:(NSString *)name inCharacteristic:(CBCharacteristic *)characteristic;
+- (void)readDataFromPeriperal:(CBPeripheral *)jrPeripheral inCharacteristic:(CBCharacteristic *)characteristic;
 
-- (void)writeData:(NSData *)data toPeriperal:(JRCBPeripheral *)jrPeripheral characteritic:(CBCharacteristic *)characteristic;
-- (void)writeData:(NSData *)data toPeriperal:(JRCBPeripheral *)jrPeripheral characteritic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)characteristicWriteType;
+- (void)writeData:(NSData *)data toPeriperal:(CBPeripheral *)jrPeripheral characteritic:(CBCharacteristic *)characteristic;
+- (void)writeData:(NSData *)data toPeriperal:(CBPeripheral *)jrPeripheral characteritic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)characteristicWriteType;
+
 - (void)writeData:(NSData *)data toPeriperalWithName:(NSString *)name characteritic:(CBCharacteristic *)characteristic;
 - (void)writeData:(NSData *)data toPeriperalWithName:(NSString *)name characteritic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)characteristicWriteType;
 @end

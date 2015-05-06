@@ -16,8 +16,7 @@
 		DF68A6041A493365006BB878 /* BLEToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A6031A493365006BB878 /* BLEToolTests.m */; };
 		DF68A60F1A493B00006BB878 /* JRBluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */; };
 		DF68A6111A493C54006BB878 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF68A6101A493C54006BB878 /* CoreBluetooth.framework */; };
-		DF68A6161A49539B006BB878 /* JRCBPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A6151A49539B006BB878 /* JRCBPeripheral.m */; };
-		DFA5BD901A8C82050000FD35 /* MPController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA5BD8F1A8C82050000FD35 /* MPController.m */; };
+		DFC515CF1AFA003D004F81FF /* RTBleConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC515CE1AFA003D004F81FF /* RTBleConnector.m */; };
 		DFCBA52B1A5A24A2007E433F /* VMBleConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */; };
 		EE3773511A5FE235009E66CB /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EE37734E1A5FE235009E66CB /* SVProgressHUD.bundle */; };
 		EE3773521A5FE235009E66CB /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3773501A5FE235009E66CB /* SVProgressHUD.m */; };
@@ -54,10 +53,9 @@
 		DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRBluetoothManager.h; sourceTree = "<group>"; };
 		DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRBluetoothManager.m; sourceTree = "<group>"; };
 		DF68A6101A493C54006BB878 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		DF68A6141A49539B006BB878 /* JRCBPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRCBPeripheral.h; sourceTree = "<group>"; };
-		DF68A6151A49539B006BB878 /* JRCBPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRCBPeripheral.m; sourceTree = "<group>"; };
-		DFA5BD8E1A8C82050000FD35 /* MPController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPController.h; sourceTree = "<group>"; };
-		DFA5BD8F1A8C82050000FD35 /* MPController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPController.m; sourceTree = "<group>"; };
+		DFC515CC1AFA003D004F81FF /* RongTai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongTai.h; sourceTree = "<group>"; };
+		DFC515CD1AFA003D004F81FF /* RTBleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTBleConnector.h; sourceTree = "<group>"; };
+		DFC515CE1AFA003D004F81FF /* RTBleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBleConnector.m; sourceTree = "<group>"; };
 		DFCBA5291A5A24A2007E433F /* VMBleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMBleConnector.h; sourceTree = "<group>"; };
 		DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMBleConnector.m; sourceTree = "<group>"; };
 		EE37734D1A5FE235009E66CB /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
@@ -101,6 +99,7 @@
 				EE37734C1A5FE235009E66CB /* SVProgressHUD */,
 				DF68A6101A493C54006BB878 /* CoreBluetooth.framework */,
 				DF68A5E61A493365006BB878 /* BLETool */,
+				DF68A5E71A493365006BB878 /* Supporting Files */,
 				DF68A6001A493365006BB878 /* BLEToolTests */,
 				DF68A5E51A493365006BB878 /* Products */,
 			);
@@ -118,6 +117,9 @@
 		DF68A5E61A493365006BB878 /* BLETool */ = {
 			isa = PBXGroup;
 			children = (
+				DFC515CC1AFA003D004F81FF /* RongTai.h */,
+				DFC515CD1AFA003D004F81FF /* RTBleConnector.h */,
+				DFC515CE1AFA003D004F81FF /* RTBleConnector.m */,
 				DF68A5EB1A493365006BB878 /* AppDelegate.h */,
 				DF68A5EC1A493365006BB878 /* AppDelegate.m */,
 				DF68A5EE1A493365006BB878 /* ViewController.h */,
@@ -131,15 +133,10 @@
 				DF68A5F11A493365006BB878 /* Main.storyboard */,
 				DF68A5F41A493365006BB878 /* Images.xcassets */,
 				DF68A5F61A493365006BB878 /* LaunchScreen.xib */,
-				DF68A5E71A493365006BB878 /* Supporting Files */,
 				DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */,
 				DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */,
-				DF68A6141A49539B006BB878 /* JRCBPeripheral.h */,
-				DF68A6151A49539B006BB878 /* JRCBPeripheral.m */,
 				DFCBA5291A5A24A2007E433F /* VMBleConnector.h */,
 				DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */,
-				DFA5BD8E1A8C82050000FD35 /* MPController.h */,
-				DFA5BD8F1A8C82050000FD35 /* MPController.m */,
 			);
 			path = BLETool;
 			sourceTree = "<group>";
@@ -151,6 +148,7 @@
 				DF68A5E91A493365006BB878 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = BLETool;
 			sourceTree = "<group>";
 		};
 		DF68A6001A493365006BB878 /* BLEToolTests */ = {
@@ -283,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF68A6161A49539B006BB878 /* JRCBPeripheral.m in Sources */,
 				DF68A60F1A493B00006BB878 /* JRBluetoothManager.m in Sources */,
 				DF68A5F01A493365006BB878 /* ViewController.m in Sources */,
 				DF68A5ED1A493365006BB878 /* AppDelegate.m in Sources */,
@@ -293,7 +290,7 @@
 				EE4A88E01A5CC4A2001440D6 /* VMTimerViewController.m in Sources */,
 				EE3773521A5FE235009E66CB /* SVProgressHUD.m in Sources */,
 				DF68A5EA1A493365006BB878 /* main.m in Sources */,
-				DFA5BD901A8C82050000FD35 /* MPController.m in Sources */,
+				DFC515CF1AFA003D004F81FF /* RTBleConnector.m in Sources */,
 				EE4A88E61A5CC4D8001440D6 /* VMThermometerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,10 @@
 //#define kDeviceThermometerName @"BLE Scale-4C4CED88"
 //#define kDeviceScaleName @"BLE Scale-148DE8B2"
 
+static NSString *const VM_Periperal     = @"VM_Periperal";
+static NSString *const VM_BroadcastData = @"VM_BroadcastData";
+static NSString *const VM_RSSI          = @"VM_RSSI";
+
 typedef NS_ENUM(Byte, VMBleDeviceID) {
     VMBleDeviceScale = 0x01,
     VMBleDeviceTimer = 0x02,
@@ -74,7 +78,9 @@ static NSString *const kDeviceVersionCharacteristicUUID = @"2A26";
 @optional
 
 - (void)didUpdateState:(CBCentralManagerState)state;
-- (void)didFoundPeripheral:(JRCBPeripheral *)peripheral;
+
+- (void)didFoundPeripheralInformation:(NSDictionary *)peripheralInfo;
+
 - (void)didConnectPeriphral:(CBPeripheral *)periphral;
 - (void)didFailToConnectPeriphral:(CBPeripheral *)periphral;
 - (void)didDisconnectPeriphral:(CBPeripheral *)periphral;
@@ -113,7 +119,7 @@ static NSString *const kDeviceVersionCharacteristicUUID = @"2A26";
 - (void)startScanPeripherals:(NSArray *)serviceUUIDs;
 - (void)stopScanPeripherals;
 
-- (void)connectPeripheral:(JRCBPeripheral *)jrPeripheral withCompleted:(void(^)(BOOL success))complted;
+- (void)connectPeripheral:(CBPeripheral *)peripheral withCompleted:(void(^)(BOOL success))complted;
 
 - (void)scalePoweroff;
 - (void)scaleBattery;

@@ -56,7 +56,7 @@
     [[JRBluetoothManager shareManager] stopScanPeripherals];
 }
 
-- (void)connectPeripheral:(JRCBPeripheral *)jrPeripheral withCompleted:(void(^)(BOOL success))complted {
+- (void)connectPeripheral:(CBPeripheral *)jrPeripheral withCompleted:(void(^)(BOOL success))complted {
     [[JRBluetoothManager shareManager] connectPeripheral:jrPeripheral];
 }
 
@@ -70,13 +70,17 @@
     }
 }
 
-- (void)didFoundPeripheral:(JRCBPeripheral *)peripheral
-{
-    if (_delegate && [_delegate respondsToSelector:@selector(didFoundPeripheral:)])
-    {
-        [_delegate didFoundPeripheral:peripheral];
+- (void)didFoundPeripheral:(CBPeripheral *)peripheral advertisement:(NSDictionary *)advertisement rssi:(NSNumber *)rssi {
+    if (_delegate && [_delegate respondsToSelector:@selector(didFoundPeripheralInformation:)]) {
+        NSDictionary *info = @{
+                               VM_Periperal:peripheral,
+                               VM_BroadcastData:advertisement,
+                               VM_RSSI:rssi,
+                               };
+        [_delegate didFoundPeripheralInformation:info];
     }
 }
+
 
 - (void)didConnectPeriphral:(CBPeripheral *)periphral
 {

@@ -58,69 +58,61 @@
     [centerManager stopScan];
 }
 
-- (void)connectPeripheral:(JRCBPeripheral *)jrPeripheral
+- (void)connectPeripheral:(CBPeripheral *)peripheral
 {
-    [centerManager connectPeripheral:jrPeripheral.peripheral options:nil];
+    [centerManager connectPeripheral:peripheral options:nil];
 }
 
-- (void)cancelConnectPeriphral:(JRCBPeripheral *)jrPeripheral
+- (void)cancelConnectPeriphral:(CBPeripheral *)peripheral
 {
-    [centerManager cancelPeripheralConnection:jrPeripheral.peripheral];
+    [centerManager cancelPeripheralConnection:peripheral];
 }
 
-- (void)readDataFromPeriperal:(JRCBPeripheral *)jrPeripheral inCharacteristic:(CBCharacteristic *)characteristic
+- (void)readDataFromPeriperal:(CBPeripheral *)peripheral inCharacteristic:(CBCharacteristic *)characteristic
 {
-    if (jrPeripheral.peripheral && characteristic)
+    if (peripheral && characteristic)
     {
-        [jrPeripheral.peripheral readValueForCharacteristic:characteristic];
+        [peripheral readValueForCharacteristic:characteristic];
     }
 }
 
 - (void)readDataFromPeriperalWithName:(NSString *)name inCharacteristic:(CBCharacteristic *)characteristic {
-    JRCBPeripheral *targetPeripheral = connectedPeriphralDictionary[name];
+    CBPeripheral *targetPeripheral = connectedPeriphralDictionary[name];
     if (targetPeripheral) {
         [self readDataFromPeriperal:targetPeripheral inCharacteristic:characteristic];
     }
 }
 
-- (void)writeData:(NSData *)data toPeriperal:(JRCBPeripheral *)jrPeripheral characteritic:(CBCharacteristic *)characteristic
+- (void)writeData:(NSData *)data toPeriperal:(CBPeripheral *)peripheral characteritic:(CBCharacteristic *)characteristic
 {
-    if (jrPeripheral.peripheral && data && characteristic)
+    if (peripheral && data && characteristic)
     {
+        NSLog(@"============ writeData ============");
         NSLog(@"characteristic: %@", [characteristic.UUID UUIDString]);
         NSLog(@"data: %@", data);
-        [jrPeripheral.peripheral writeValue:data forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
+        [peripheral writeValue:data forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
     }
 }
 
-- (void)writeData:(NSData *)data toPeriperal:(JRCBPeripheral *)jrPeripheral characteritic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)characteristicWriteType
+- (void)writeData:(NSData *)data toPeriperal:(CBPeripheral *)peripheral characteritic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)characteristicWriteType
 {
-    if (jrPeripheral.peripheral && data && characteristic)
+    if (peripheral && data && characteristic)
     {
+        NSLog(@"============ writeData ============");
         NSLog(@"characteristic: %@", [characteristic.UUID UUIDString]);
         NSLog(@"data: %@", data);
-        [jrPeripheral.peripheral writeValue:data forCharacteristic:characteristic type:characteristicWriteType];
+        [peripheral writeValue:data forCharacteristic:characteristic type:characteristicWriteType];
     }
 }
 
 - (void)writeData:(NSData *)data toPeriperalWithName:(NSString *)name characteritic:(CBCharacteristic *)characteristic {
-    JRCBPeripheral *targetPeripheral = connectedPeriphralDictionary[name];
-    for(CBService *service in targetPeripheral.peripheral.services) {
-        if ([[service.UUID UUIDString] isEqualToString:@"312700E2-E798-4D5C-8DCF-49908332DF9F"]) {
-            for(CBCharacteristic *myCharacteristic in service.characteristics) {
-                if ([[myCharacteristic.UUID UUIDString] isEqualToString:@"FFA28CDE-6525-4489-801C-1C060CAC9769"]) {
-                    NSData *data = [@"a" dataUsingEncoding:NSUTF8StringEncoding];
-                    [self writeData:data toPeriperal:targetPeripheral characteritic:myCharacteristic];
-                }
-            }
-        }
+    CBPeripheral *targetPeripheral = connectedPeriphralDictionary[name];
+    if (targetPeripheral) {
+        [self writeData:data toPeriperal:targetPeripheral characteritic:characteristic];
     }
-//    if (targetPeripheral) {
-//        [self writeData:data toPeriperal:targetPeripheral characteritic:characteristic];
-//    }
 }
 - (void)writeData:(NSData *)data toPeriperalWithName:(NSString *)name characteritic:(CBCharacteristic *)characteristic type:(CBCharacteristicWriteType)characteristicWriteType {
-    JRCBPeripheral *targetPeripheral = connectedPeriphralDictionary[name];
+    CBPeripheral *targetPeripheral = connectedPeriphralDictionary[name];
     if (targetPeripheral) {
         [self writeData:data toPeriperal:targetPeripheral characteritic:characteristic type:characteristicWriteType];
     }
@@ -148,26 +140,19 @@
     NSLog(@"periperal UUID: %@",[peripheral.identifier UUIDString]);
     NSLog(@"periperal advertisemenetData:%@",advertisementData);
     
-    JRCBPeripheral *jrPeriphral = [[JRCBPeripheral alloc] init];
-    jrPeriphral.peripheral = peripheral;
-    jrPeriphral.advertisementData = advertisementData;
-    jrPeriphral.periphalRSSI = RSSI;
-    
-    if (_delegate && [_delegate respondsToSelector:@selector(didFoundPeripheral:)])
+    if (_delegate && [_delegate respondsToSelector:@selector(didFoundPeripheral:advertisement:rssi:)])
     {
-        [_delegate didFoundPeripheral:jrPeriphral];
+        [_delegate didFoundPeripheral:peripheral advertisement:advertisementData rssi:RSSI];
     }
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
     NSLog(@"============ jr didConnectPeripheral ============");
-    JRCBPeripheral *jrPeriphral = [[JRCBPeripheral alloc] init];
-    jrPeriphral.peripheral = peripheral;
-    [connectedPeriphralDictionary setObject:jrPeriphral forKey:peripheral.name];
-    jrPeriphral.peripheral.delegate = self;
+    [connectedPeriphralDictionary setObject:peripheral forKey:peripheral.name];
+    peripheral.delegate = self;
     
-    [jrPeriphral.peripheral discoverServices:nil];
+    [peripheral discoverServices:nil];
     
     if (_delegate && [_delegate respondsToSelector:@selector(didConnectPeriphral:)])
     {
