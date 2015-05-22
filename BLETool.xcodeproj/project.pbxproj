@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF1E289F1B0C7E3B00798AC4 /* RTController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1E289E1B0C7E3B00798AC4 /* RTController.m */; };
 		DF68A5EA1A493365006BB878 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A5E91A493365006BB878 /* main.m */; };
 		DF68A5ED1A493365006BB878 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A5EC1A493365006BB878 /* AppDelegate.m */; };
 		DF68A5F01A493365006BB878 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF68A5EF1A493365006BB878 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF1E289D1B0C7E3B00798AC4 /* RTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTController.h; sourceTree = "<group>"; };
+		DF1E289E1B0C7E3B00798AC4 /* RTController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTController.m; sourceTree = "<group>"; };
 		DF68A5E41A493365006BB878 /* BLETool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLETool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF68A5E81A493365006BB878 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF68A5E91A493365006BB878 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRBluetoothManager.h; sourceTree = "<group>"; };
 		DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRBluetoothManager.m; sourceTree = "<group>"; };
 		DF68A6101A493C54006BB878 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		DF917CA41B01A7E600214E70 /* RTCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTCommand.h; sourceTree = "<group>"; };
 		DFC515CC1AFA003D004F81FF /* RongTai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RongTai.h; sourceTree = "<group>"; };
 		DFC515CD1AFA003D004F81FF /* RTBleConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTBleConnector.h; sourceTree = "<group>"; };
 		DFC515CE1AFA003D004F81FF /* RTBleConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTBleConnector.m; sourceTree = "<group>"; };
@@ -118,8 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				DFC515CC1AFA003D004F81FF /* RongTai.h */,
+				DF917CA41B01A7E600214E70 /* RTCommand.h */,
 				DFC515CD1AFA003D004F81FF /* RTBleConnector.h */,
 				DFC515CE1AFA003D004F81FF /* RTBleConnector.m */,
+				DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */,
+				DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */,
 				DF68A5EB1A493365006BB878 /* AppDelegate.h */,
 				DF68A5EC1A493365006BB878 /* AppDelegate.m */,
 				DF68A5EE1A493365006BB878 /* ViewController.h */,
@@ -130,11 +137,11 @@
 				EE4A88DF1A5CC4A2001440D6 /* VMTimerViewController.m */,
 				EE4A88E41A5CC4D8001440D6 /* VMThermometerViewController.h */,
 				EE4A88E51A5CC4D8001440D6 /* VMThermometerViewController.m */,
+				DF1E289D1B0C7E3B00798AC4 /* RTController.h */,
+				DF1E289E1B0C7E3B00798AC4 /* RTController.m */,
 				DF68A5F11A493365006BB878 /* Main.storyboard */,
 				DF68A5F41A493365006BB878 /* Images.xcassets */,
 				DF68A5F61A493365006BB878 /* LaunchScreen.xib */,
-				DF68A60D1A493B00006BB878 /* JRBluetoothManager.h */,
-				DF68A60E1A493B00006BB878 /* JRBluetoothManager.m */,
 				DFCBA5291A5A24A2007E433F /* VMBleConnector.h */,
 				DFCBA52A1A5A24A2007E433F /* VMBleConnector.m */,
 			);
@@ -288,6 +295,7 @@
 				EE4A88E31A5CC4C1001440D6 /* VMScaleViewController.m in Sources */,
 				DFCBA52B1A5A24A2007E433F /* VMBleConnector.m in Sources */,
 				EE4A88E01A5CC4A2001440D6 /* VMTimerViewController.m in Sources */,
+				DF1E289F1B0C7E3B00798AC4 /* RTController.m in Sources */,
 				EE3773521A5FE235009E66CB /* SVProgressHUD.m in Sources */,
 				DF68A5EA1A493365006BB878 /* main.m in Sources */,
 				DFC515CF1AFA003D004F81FF /* RTBleConnector.m in Sources */,

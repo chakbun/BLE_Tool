@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gXq-IF-yGb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gXq-IF-yGb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -446,6 +447,40 @@
             </objects>
             <point key="canvasLocation" x="655" y="1264"/>
         </scene>
+        <!--Controller-->
+        <scene sceneID="2ec-CY-Ohh">
+            <objects>
+                <viewController id="lNz-CJ-1re" customClass="RTController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kyj-3q-3p7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eco-UY-K8q">
+                                <rect key="frame" x="14" y="84" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fKP-Fs-Bjm">
+                                <rect key="frame" x="14" y="122" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Engger">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="EnggerControlAction:" destination="lNz-CJ-1re" eventType="touchUpInside" id="s72-CS-X5t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="G6L-Rz-Aou"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tu7-QY-cVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="1264"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -473,6 +508,7 @@
                         <segue destination="MF0-ci-nqD" kind="push" identifier="scaleViewController" id="u3d-OP-zbE"/>
                         <segue destination="b9p-Kd-DsG" kind="push" identifier="thermometerViewController" id="O6s-tj-bkh"/>
                         <segue destination="mwd-AX-x19" kind="push" identifier="mpSegue" id="9CA-9Y-7Au"/>
+                        <segue destination="lNz-CJ-1re" kind="push" identifier="rtSegue" id="UG7-Bf-zyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

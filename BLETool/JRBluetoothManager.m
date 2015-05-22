@@ -151,7 +151,7 @@
     NSLog(@"============ jr didConnectPeripheral ============");
     [connectedPeriphralDictionary setObject:peripheral forKey:peripheral.name];
     peripheral.delegate = self;
-    
+
     [peripheral discoverServices:nil];
     
     if (_delegate && [_delegate respondsToSelector:@selector(didConnectPeriphral:)])
