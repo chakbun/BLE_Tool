@@ -49,7 +49,7 @@ static NSString *const RTBle_RSSI          = @"RTRSSI";
 
 @interface RTBleConnector : NSObject
 
-@property (nonatomic, strong) id<RTBleConnectorDelegate> delegate;
+@property (nonatomic, weak) id<RTBleConnectorDelegate> delegate;
 
 + (instancetype)shareManager;
 

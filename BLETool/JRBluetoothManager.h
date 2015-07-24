@@ -31,7 +31,7 @@
 
 @interface JRBluetoothManager : NSObject
 
-@property (nonatomic, strong) id<JRBluetoothManagerDelegate> delegate;
+@property (nonatomic, weak) id<JRBluetoothManagerDelegate> delegate;
 
 + (instancetype)shareManager;
 

@@ -112,7 +112,7 @@ static NSString *const kDeviceVersionCharacteristicUUID = @"2A26";
 
 @interface VMBleConnector : NSObject
 
-@property (nonatomic, strong) id<VMBleConnectorDeledate>delegate;
+@property (nonatomic, weak) id<VMBleConnectorDeledate>delegate;
 
 + (instancetype)shareManager;
 
